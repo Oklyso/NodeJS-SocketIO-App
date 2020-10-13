@@ -1,21 +1,13 @@
-var port = process.env.PORT || 3000;
+const socketIO = require('socket.io')
+const PORT = process.env.PORT || 3000;
+const INDEX = '/index.html';
+const express = require('express');
 
-var app = require('express').createServer()
-var io = require('socket.io').listen(app);
+const app = express()
+app.use(express.static('public'))
+const server = app.listen(PORT)
 
-app.listen(port);
-
-// Heroku setting for long polling - assuming io is the Socket.IO server object
-io.configure(function () { 
-  io.set("transports", ["xhr-polling"]); 
-  io.set("polling duration", 10); 
-});
-
-// routing
-app.get('/', function (req, res) {
-  res.sendfile(__dirname + '/index.html');
-});
-
+  const io = socketIO(server)
 const users = {}
 io.on('connection',socket =>{
     socket.on('new-user',name =>{
