@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Chat App Example</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">  
+        <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+        <script defer src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <div id="app-container">
+
+            <div id="message-container"></div>
+            <form id="send-container"><input autocomplete="off" type="text" id="message-input"/><br/>
+            <button type="submit" id="send-button">Send</button></form>
+
+
+            <div id="mutebox">
+            <input type="checkbox" id="mutebutton">Mute Sounds</button>
+            </div>
+
+        </div>
+    </body>
+</html>

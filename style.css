@@ -1,0 +1,74 @@
+body{
+    background: #556270;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FF6B6B, #556270);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FF6B6B, #556270); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+overflow-x:hidden;
+}
+
+#app-container{
+    vertical-align: middle;
+    width:100%;
+    height:100%;
+    text-align:center;
+}
+#message-input{
+    float:bottom;
+    margin-top:6em;
+    width:14em;
+    outline:none;
+    background:transparent;
+    border:none;
+    border-bottom:1px solid #566963;
+    font-family: monaco, Consolas, "Lucida Console", monospace;
+}
+
+
+#mutebutton{
+    background:transparent;
+}
+
+#message-container{
+    margin-top:5em;
+    background:transparent;
+    color:white;
+    font-family: monaco, Consolas, "Lucida Console", monospace;
+}
+
+#send-container{
+    margin-top:5em;
+    align-content:center;
+}
+
+#send-button{
+    box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #556270 5%, #ff6b6b 100%);
+	background-color: #ff6b6b;
+    border-radius:5px;
+    margin-top:20px;
+	border:1px solid #556270;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+    font-size:15px;
+    outline:none;
+	font-weight:bold;
+	padding:11px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}
+
+#send-button:active{
+    position:relative;
+	top:0.2em;
+}
+
+#mutebox{
+    position:fixed;
+    right:20px;
+    top:0;
+}
+#send-button:hover{
+    background:linear-gradient(to bottom, #556270 5%, #ff6b6b 100%);
+	background-color:#ff6b6b;
+}
